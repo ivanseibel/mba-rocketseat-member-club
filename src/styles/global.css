@@ -1,0 +1,107 @@
+:root {
+  /* Color styles */
+  --main-pink: #D658B3;
+  --main-green: #45B442;
+  --base-white: #FFFFFF;
+  --base-gray-100: #F4F1F2;
+  --base-gray-200: #E9E7E9;
+  --base-gray-300: #DFDCDF;
+  --base-gray-400: #CECACD;
+  --base-gray-500: #756C71;
+  --base-gray-600: #4A4448;
+  --base-gray-700: #332B31;
+  
+  /* Base Font Size */
+  font-size: 16px;
+
+  /* Font Family */
+  --font-family-base: 'Oxygen', sans-serif;
+
+  /* Font Size in REM */
+  --font-size-title-md: 1.5rem; /* 24px */
+  --font-size-title-sm: 1.125rem; /* 18px */
+  --font-size-subtitle-md: 0.875rem; /* 14px */
+  --font-size-subtitle-sm: 0.75rem; /* 12px */
+  --font-size-text-md: 1rem; /* 16px */
+  --font-size-text-sm: 0.875rem; /* 14px */
+  --font-size-text-xs: 0.75rem; /* 12px */
+
+  /* Line Height */
+  --line-height-default: 1.4; /* 140% */
+
+  /* Font Weight */
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
+
+  /* Text Case */
+  --text-transform-uppercase: uppercase;
+  --text-transform-default: none;
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-base);
+  line-height: var(--line-height-default);
+  font-size: var(--font-size-text-md); /* 1rem = 16px */
+}
+
+h1, .title-md {
+  font-size: var(--font-size-title-md); /* 1.5rem = 24px */
+  font-weight: var(--font-weight-bold);
+  text-transform: var(--text-transform-default);
+}
+
+h2, .title-sm {
+  font-size: var(--font-size-title-sm); /* 1.125rem = 18px */
+  font-weight: var(--font-weight-bold);
+  text-transform: var(--text-transform-default);
+}
+
+.subtitle-md {
+  font-size: var(--font-size-subtitle-md); /* 0.875rem = 14px */
+  font-weight: var(--font-weight-bold);
+  text-transform: var(--text-transform-uppercase);
+}
+
+.subtitle-sm {
+  font-size: var(--font-size-subtitle-sm); /* 0.75rem = 12px */
+  font-weight: var(--font-weight-bold);
+  text-transform: var(--text-transform-uppercase);
+}
+
+.text-md {
+  font-size: var(--font-size-text-md); /* 1rem = 16px */
+  font-weight: var(--font-weight-regular);
+  text-transform: var(--text-transform-default);
+}
+
+.text-sm {
+  font-size: var(--font-size-text-sm); /* 0.875rem = 14px */
+  font-weight: var(--font-weight-regular);
+  text-transform: var(--text-transform-default);
+}
+
+.text-xs {
+  font-size: var(--font-size-text-xs); /* 0.75rem = 12px */
+  font-weight: var(--font-weight-regular);
+  text-transform: var(--text-transform-default);
+}
+
+.container {
+  max-width: 375px;
+  background-color: var(--base-gray-200);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 376px) {
+  .container {
+    max-width: 1440px;
+  }
+}
