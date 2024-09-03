@@ -97,7 +97,7 @@ h2, .title-sm {
   max-width: 375px;
   background-color: var(--base-gray-200);
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 .75rem;
 }
 
 @media (min-width: 376px) {
