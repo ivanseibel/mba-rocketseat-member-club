@@ -61,7 +61,12 @@ header {
 
       border: none;
       border-radius: 0.5rem;
-      background-color: var(--base-gray-500);
+      background-color: var(--base-gray-700);
+
+      &:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+      }
 
       & i {
         font-size: 1.25rem;
