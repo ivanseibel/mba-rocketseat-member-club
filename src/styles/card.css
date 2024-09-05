@@ -1,0 +1,95 @@
+.card-container {
+  padding: 1.5rem 1.25rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+
+  & .card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    align-self: stretch;
+
+    & div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      align-items: flex-start;
+      flex: 1;
+
+      & h3 {
+        color: var(--base-gray-500);
+
+        font-size: var(--font-size-subtitle-sm);
+        font-weight: var(--font-weight-bold);
+        text-transform: var(--text-transform-uppercase);
+      }
+
+      & p {
+        color: var(--base-gray-500, #756C71);
+
+        font-size: var(--font-size-text-xs);
+        font-weight: var(--font-weight-regular);
+        text-transform: var(--text-transform-default);
+      }
+    }
+
+    & span {
+      display: flex;
+      height: 1.5rem;
+      padding: 0 0.5rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+
+      border-radius: 99rem;
+      background: var(--base-gray-300);
+
+      color: var(--Base-Gray-500, #756C71);
+
+      font-size: var(--font-size-subtitle-sm);
+      font-weight: var(--font-weight-bold);
+      text-transform: var(--text-transform-uppercase);
+    }
+  }
+
+  & .card-stamps {
+    /* Layout */
+    display: flex;
+    width: 19.5rem;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+
+    & .stamp-container {
+      /* Layout */
+      display: flex;
+      width: 3.5rem;
+      height: 3.5rem;
+      padding: 0.5rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+  
+      /* Style */
+      border-radius: 0.79rem;
+      background: var(--base-gray-200);
+  
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+
+        &.img-inactive {
+          filter: grayscale(100%);
+          opacity: 0.5;
+        }
+      }
+    }
+
+  }
+}
