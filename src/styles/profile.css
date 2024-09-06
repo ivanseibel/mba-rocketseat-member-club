@@ -4,9 +4,6 @@
   padding: 1rem;
   background-color: var(--base-gray-100);
   align-items: center;
-  /* align-self: stretch; */
-
-  /* border-radius: 16px; */
 
   & .profile-image {
     display: flex;

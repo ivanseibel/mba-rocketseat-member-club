@@ -103,6 +103,7 @@ h2, .title-sm {
 
 .main-content {
   display: grid;
+  gap: 0.5rem;
 }
 
 .card {
