@@ -119,8 +119,14 @@ h2, .title-sm {
     height: 100vh;
   }
 
+  main {
+    max-width: 57rem;
+    margin: 0 auto;
+  }
+
   .main-content {
     display: grid;
+    grid-template-columns: 1fr 2fr;
     grid-template-areas: 
       "member-info card-container"
       "history card-container"

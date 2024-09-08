@@ -93,3 +93,60 @@
 
   }
 }
+
+@media (min-width: 376px) {
+  .card-container {
+    padding: 2.25rem 2rem 2rem 2rem;
+    gap: 2rem;
+    align-self: stretch;
+
+    & .card-header {
+
+      & div {
+        & p {
+          font-size: var(--font-size-subtitle-md);
+          font-weight: var(--font-weight-regular);
+          text-transform: var(--text-transform-default);
+        }
+      }
+
+      & span {
+        /* Layout */
+        height: 2rem;
+        padding: 0rem .75rem;
+
+        font-size: var(--font-size-subtitle-md);
+        font-weight: var(--font-weight-bold);
+        text-transform: var(--text-transform-uppercase);
+      }
+    }
+
+    & .card-stamps {
+      /* Layout */
+      gap: 1rem;
+      align-self: stretch;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+
+      & .stamp-container {
+        /* Layout */
+        width: 5.5rem;
+        height: 5.5rem;
+        padding: .75rem;
+  
+        /* Style */
+        border-radius: 1.25rem;
+        background: var(--base-gray-200);
+        backdrop-filter: blur(.3125rem);
+  
+        & img {
+          &.img-inactive {
+            filter: grayscale(100%);
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}
