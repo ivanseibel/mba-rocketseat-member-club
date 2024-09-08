@@ -98,7 +98,6 @@ h2, .title-sm {
   background-color: var(--base-gray-200);
   margin: 0 auto;
   padding: 0 .75rem .75rem;
-  min-height: 100vh;
 }
 
 .main-content {
@@ -117,5 +116,32 @@ h2, .title-sm {
 @media (min-width: 376px) {
   .container {
     max-width: 1440px;
+    height: 100vh;
+  }
+
+  .main-content {
+    display: grid;
+    grid-template-areas: 
+      "member-info card-container"
+      "history card-container"
+      "history card-container"
+      "history card-progress";
+    gap: 20px;
+  }
+
+  .member-info {
+    grid-area: member-info;
+  }
+
+  .card-container {
+    grid-area: card-container;
+  }
+
+  .card-progress {
+    grid-area: card-progress;
+  }
+
+  .history-loyalty {
+    grid-area: history;
   }
 }

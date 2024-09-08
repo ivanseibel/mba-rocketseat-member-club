@@ -2,7 +2,6 @@
   display: flex;
   gap: 1rem;
   padding: 1rem;
-  background-color: var(--base-gray-100);
   align-items: center;
 
   & .profile-image {
