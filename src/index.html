@@ -22,23 +22,23 @@
       <div class="logo-container">
         <img src="../public/images/Logo.png" alt="Member Club Logo">
       </div>
-      <div class="input-container">
-        <input type="text" placeholder="Search for a member">
-        <button disabled>
+      <form class="input-container">
+        <input type="text" placeholder="Search for a member" id="id">
+        <button disabled type="submit">
           <i class="ph ph-arrow-elbow-down-left"></i>
         </button>
-      </div>
+      </form>
     </header>
 
-    <main class="main-content">
+    <main class="main-content hidden">
       <section class="member-info card">
         <div class="profile-container">
           <div class="profile-image">
-            <img src="https://thispersondoesnotexist.com/" alt="Profile Image">
+            <img src="https://thispersondoesnotexist.com/" alt="Profile Image" id="user-avatar">
           </div>
           <div class="profile-info">
-            <h2>John Doe</h2>
-            <p>Member Since: 01/01/2021</p>
+            <h id="user-name">John Doe</h>
+            <p id="member-since">Member Since: 01/01/2021</p>
           </div>
         </div>
       </section>

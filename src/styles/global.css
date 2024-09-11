@@ -113,10 +113,14 @@ h2, .title-sm {
   background: var(--base-gray-100);
 }
 
+.hidden {
+  display: none !important; 
+}
+
 @media (min-width: 376px) {
   .container {
     max-width: 1440px;
-    height: 100vh;
+    min-height: 100vh;
   }
 
   main {
