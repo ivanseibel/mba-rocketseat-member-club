@@ -24,6 +24,7 @@ form.addEventListener('submit', async (e) => {
         renderUser(user);
         renderAppointmentHistory(user.appointmentHistory);
         updateProgressBar(user.loyaltyCard.totalCuts, user.loyaltyCard.cutsNeeded);
+        renderLoyaltyCard(user);
         
         main.classList.remove('hidden');
       } else {
@@ -95,4 +96,40 @@ function renderAppointmentHistory(appointmentHistory) {
 
     ulAppointmentHistory.appendChild(li);
   });
+}
+
+function renderLoyaltyCard(user) {
+  const spanCardId = document.querySelector('span.card-id');
+  spanCardId.textContent = user.id;
+
+  const pDescription = document.querySelector('.card-header div p');
+  pDescription.textContent = `Get a free haircut after ${user.loyaltyCard.cutsNeeded} cuts!`;
+
+  const divCardStamps = document.querySelector('.card-stamps');
+  divCardStamps.innerHTML = '';
+
+  for (let i = 0; i < user.loyaltyCard.cutsNeeded; i++) {
+    const divStampContainer = document.createElement('div');
+    divStampContainer.classList.add('stamp-container');
+
+    if (i < user.loyaltyCard.totalCuts) {
+      const imgStamp = document.createElement('img');
+      imgStamp.src = '../public/images/PinCheck.png';
+      imgStamp.alt = 'Checkmark Icon';
+      divStampContainer.appendChild(imgStamp);
+    }
+
+    if (i === user.loyaltyCard.cutsNeeded - 1) {
+      const imgStamp = document.createElement('img');
+      imgStamp.src = '../public/images/PinGift.png';
+      imgStamp.alt = 'Gift Icon';
+      divStampContainer.appendChild(imgStamp);
+    }
+
+    divCardStamps.appendChild(divStampContainer);
+  }
+
+  if (user.loyaltyCard.cutsRemaining === 0) {
+    alert('Congratulations! You have earned a free haircut!');
+  }
 }
